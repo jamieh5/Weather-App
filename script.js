@@ -5,6 +5,7 @@ const humidity = document.querySelector('.humidity')
 const windSpeed = document.querySelector('.windspeed')
 const input = document.querySelector('.location-input')
 const searchInput = document.querySelector('.search-input')
+const displayWeather = document.querySelector('.display-weather')
 
 let city
 searchInput.addEventListener('click', function () {
@@ -13,6 +14,7 @@ searchInput.addEventListener('click', function () {
   } else {
     city = input.value
     getWeather()
+    displayWeather.style.opacity = '1'
   }
 })
 
@@ -27,8 +29,8 @@ const getWeather = async function () {
   console.log(info.current.temp_c)
 
   // Changing HTML Text
-  temp.innerHTML = info.current.temp_c
+  temp.innerHTML = `${info.current.temp_c}°`
   locationCity.innerHTML = info.location.name
   humidity.innerHTML = info.current.humidity
-  windSpeed.innerHTML = info.current.wind_kph
+  windSpeed.innerHTML = `${info.current.wind_kph}(km/h)`
 }

@@ -26,9 +26,11 @@ body {
   width: 350px;
   border-radius: 25px;
   height: 500px;
+  transition: opacity 0.5s ease-in;
   font-size: 20px;
   background-color: #e3e3e3;
   margin: 10px;
+  opacity: 0;
 }
 
 .icon {
@@ -66,6 +68,10 @@ input:focus {
   height: 400px;
 }
 
+.temp {
+  font-size: 54px;
+}
+
 .bottom-container {
   height: 150px;
 }
@@ -81,8 +87,18 @@ input:focus {
 
 .humidity {
   margin-left: 10px;
+  float: left;
 }
 
 .windspeed {
   margin-right: 10px;
+  float: right;
+}
+
+.div-humidity {
+  float: left;
+}
+
+.div-windspeed {
+  float: right;
 }
