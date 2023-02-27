@@ -26,7 +26,6 @@ const getWeather = async function () {
   )
   const info = await response.json()
   console.log(info)
-  console.log(info.current.temp_c)
 
   // Changing HTML Text
   temp.innerHTML = `${info.current.temp_c}°`
